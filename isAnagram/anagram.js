@@ -1,30 +1,41 @@
-function isAnagram( word1, word2 )
-{
-	var array1 = word1.split("");
-	var array2 = word2.split("");
-	array1.sort();
-	array2.sort();
-	newword1 = array1.join("")
-	newword2 = array2.join("")
-	if (newword1 == newword2) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
+// function isAnagram( word1, word2 )
+// {
+// 	var array1 = word1.split("");
+// 	var array2 = word2.split("");
 
-console.log(isAnagram("racecarracecar", "aaaarrrrccccee"))
+// 	array1.sort();
+// 	array2.sort();
+
+// 	newword1 = array1.join("")
+// 	newword2 = array2.join("")
+
+// 	if (newword1 == newword2) {
+// 		return true;
+// 	}
+// 	else {
+// 		return false;
+// 	}
+// }
+
+// console.log(isAnagram("racecarracecar", "aaaarrrrccccee"))
+// console.log(isAnagram("Cat", "Dog"))
 
 
 function isAnagramBadWay( word1, word2 ) {
+	if (word1.length > word2.length) {
+		var maxword = word1;
+	}
+	else {
+		var maxword = word2;
+	}
 	var array1 = word1.split("");
 	var array2 = word2.split("");
-	var status = false;
+
 	for(i=0 ; i < array1.length ; i++)
 	{
 		var lettermatches1 = 0;
 		var needstomatch = 0;
+		var totalmet = 0
 
 
 		for(h = 0 ; h < array1.length ; h++) {
@@ -39,12 +50,12 @@ function isAnagramBadWay( word1, word2 ) {
 		}
 
 		if (lettermatches1 == needstomatch) {
-			status = true;
-			lettermatches1 += 1;
+			totalmet += 1
+			console.log(totalmet)
 		}
 	}
 
-	if (status == true) {
+	if (totalmet == maxword.length) {
 		return true;
 	}
 	else {
@@ -53,4 +64,6 @@ function isAnagramBadWay( word1, word2 ) {
 
 }
 
-console.log(isAnagramBadWay("racecarracecar", "aaaarrrrccccee "))
+console.log(isAnagramBadWay("racecar", "aaccerr"))
+
+
