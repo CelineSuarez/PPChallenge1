@@ -1,24 +1,24 @@
-// function isAnagram( word1, word2 )
-// {
-// 	var array1 = word1.split("");
-// 	var array2 = word2.split("");
+function isAnagram( word1, word2 )
+{
+	var array1 = word1.split("");
+	var array2 = word2.split("");
 
-// 	array1.sort();
-// 	array2.sort();
+	array1.sort();
+	array2.sort();
 
-// 	newword1 = array1.join("")
-// 	newword2 = array2.join("")
+	newword1 = array1.join("")
+	newword2 = array2.join("")
 
-// 	if (newword1 == newword2) {
-// 		return true;
-// 	}
-// 	else {
-// 		return false;
-// 	}
-// }
+	if (newword1 == newword2) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 
-// console.log(isAnagram("racecarracecar", "aaaarrrrccccee"))
-// console.log(isAnagram("Cat", "Dog"))
+console.log(isAnagram("racecarracecar", "aaaarrrrccccee"))
+console.log(isAnagram("Cat", "Dog"))
 
 
 function isAnagramBadWay( word1, word2 ) {
@@ -30,12 +30,12 @@ function isAnagramBadWay( word1, word2 ) {
 	}
 	var array1 = word1.split("");
 	var array2 = word2.split("");
+	var totalmet = 0
 
 	for(i=0 ; i < array1.length ; i++)
 	{
 		var lettermatches1 = 0;
 		var needstomatch = 0;
-		var totalmet = 0
 
 
 		for(h = 0 ; h < array1.length ; h++) {
