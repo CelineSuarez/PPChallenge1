@@ -17,13 +17,14 @@
 <body>
 	<label for="guess">Guess: </label>
 	<input type="text" name="number" id="number" />
-	<input type="submit" name="submit" value="Enter" onclick="getGuess()"/>
+	<input type="submit" name="submit" value="Enter" id="submit1"/>
 	<br>
 	<label for="output">Output: </label>
 	<br>
 	<textarea name="styled-textarea" id="output" onfocus="this.value=''; setbg('#e5fff3');" onblur="setbg('white')" disabled="disabled"></textarea>
 	<br>
-	
-	<script src="highlow.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="highlowgame.js"></script>
+
 </body>
 </html>
